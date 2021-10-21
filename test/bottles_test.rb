@@ -80,12 +80,6 @@ class BottlesTest < Minitest::Test
       "no more bottles of beer.\n" +
       "Go to the store and buy some more, " +
       "99 bottles of beer on the wall.\n"
-      puts Bottles.new.verses(2, 0)
-      output = File.open("outputFile.txt","w")
-      output << expected
-      output << "++++++++++++++++++++++++++++++++++++++++++++++++\n"
-      output << Bottles.new.verses(2, 0)
-      output.close
       assert_equal expected, Bottles.new.verses(2, 0)
   end
 
